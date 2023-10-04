@@ -12,9 +12,9 @@ import (
 	"time"
 	"unsafe"
 
-	simconnect_data "github.com/JRascagneres/Simconnect-Go/simconnect-data"
-
 	_ "embed"
+
+	simconnect_data "github.com/karlockhart/simconnect-go/simconnect-data"
 )
 
 type SimconnectInstance struct {
