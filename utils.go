@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	simconnect_data "github.com/JRascagneres/Simconnect-Go/simconnect-data"
+	simconnect_data "github.com/karlockhart/Simconnect-Go/simconnect-data"
 )
 
 func derefDataType(fieldType string) (uint32, error) {

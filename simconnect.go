@@ -78,6 +78,11 @@ type Report struct {
 	NAVActiveFrequency1  float64 `name:"NAV ACTIVE FREQUENCY:1" unit:"MHz"`
 	NAVStandbyFrequency2 float64 `name:"NAV STANDBY FREQUENCY:2" unit:"MHz"`
 	NAVActiveFrequency2  float64 `name:"NAV ACTIVE FREQUENCY:2" unit:"MHz"`
+
+	Engine1N1 float32 `name:"TURB ENG N1:1" unit:"percent"`
+	Engine1N2 float32 `name:"TURB ENG N2:1" unit:"percent"`
+	Engine2N1 float32 `name:"TURB ENG N1:2" unit:"percent"`
+	Engine2N2 float32 `name:"TURB ENG N2:2" unit:"percent"`
 }
 
 type APReport struct {
