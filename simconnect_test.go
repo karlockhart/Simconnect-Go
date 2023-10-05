@@ -157,6 +157,30 @@ func TestRadioSet(t *testing.T) {
 	time.Sleep(2 * time.Second)
 }
 
+func TestThrottleAxis(t *testing.T) {
+	instance, err := NewSimConnect(t.Name())
+	require.NoError(t, err)
+
+	type Events struct {
+		ThrottleAxis uint32
+	}
+
+	events := &Events{
+		ThrottleAxis: 21,
+	}
+
+	err = instance.MapClientEventToSimEvent(events.ThrottleAxis, "AXIS_THROTTLE_SET")
+	require.NoError(t, err)
+
+	err = instance.TransmitClientID(events.ThrottleAxis, 16384)
+	require.NoError(t, err)
+	time.Sleep(2 * time.Second)
+
+	err = instance.TransmitClientID(events.ThrottleAxis, -16384)
+	require.NoError(t, err)
+	time.Sleep(2 * time.Second)
+}
+
 func TestAPAltitude(t *testing.T) {
 	instance, err := NewSimConnect(t.Name())
 	require.NoError(t, err)

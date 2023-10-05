@@ -721,7 +721,7 @@ func (instance *SimconnectInstance) MapClientEventToSimEvent(eventID uint32, eve
 	return nil
 }
 
-func (instance *SimconnectInstance) TransmitClientID(eventID uint32, data uint32) error {
+func (instance *SimconnectInstance) TransmitClientID(eventID uint32, data int32) error {
 	args := []uintptr{
 		uintptr(instance.handle),
 		uintptr(0),
